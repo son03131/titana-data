@@ -3,6 +3,16 @@ import pandas as pd
 import matplotlib as plt
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.font_manager as fm
+
+font_path = r"font/malgun-gothic.ttf"  
+fm.fontManager.addfont(font_path)  
+
+font_prop = fm.FontProperties(fname=font_path)
+plt.rcParams['font.family'] = font_prop.get_name() 
+plt.rcParams['axes.unicode_minus'] = False
+
+
 st.header("2. 이변량 분석")
 train = pd.read_csv("train.csv")
 
