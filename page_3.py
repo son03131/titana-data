@@ -2,7 +2,12 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+font_path = r"font/malgun-gothic.ttf"  
+fm.fontManager.addfont(font_path)  
 
+font_prop = fm.FontProperties(fname=font_path)
+plt.rcParams['font.family'] = font_prop.get_name() 
+plt.rcParams['axes.unicode_minus'] = False
 
 train = pd.read_csv("train.csv")
 st.title("상관관계 분석 (Correlation Analysis)")
