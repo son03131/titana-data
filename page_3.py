@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from matplotlib import font_manager as fm
+
 font_path = r"font/malgun-gothic.ttf"  
 fm.fontManager.addfont(font_path)  
 
