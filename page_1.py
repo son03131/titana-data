@@ -54,7 +54,7 @@ st.title("고객 검색")
 search_term = st.text_input("검색 이름 입력하세요:")
 if search_term:
     filtered_data = train[train['Name'].str.contains(search_term, case=False, na=False)]
-    st.write(f"Số kết quả tìm thấy: {filtered_data.shape[0]}")
+    st.write(f"결과·: {filtered_data.shape[0]}")
     st.dataframe(filtered_data)
 else:
     st.write("검색 원하는 이름을 입력해주세요.")
@@ -74,7 +74,7 @@ if selected_pclass != '모두':
     filtered_data = filtered_data[filtered_data['Pclass'] == int(selected_pclass)]
 
 
-st.write(f"Số dòng dữ liệu sau khi lọc: {filtered_data.shape[0]}")
+st.write(f"필터 후 데이터 : {filtered_data.shape[0]}")
 st.dataframe(filtered_data)
 df = pd.read_csv("train.csv")
 df['Sex'] = df['Sex'].map({'male': 'Nam', 'female': 'Nữ'})
